@@ -1,0 +1,77 @@
+[
+  {
+    "id": "VERIFICATION_ENREGISTREMENT",
+    "description": "Email envoyé pour les personnes ayant effectué l’enregistrement sur le site Sajalni afin de procéder aux vérifications nécessaires du problème rencontré.",
+    "reponse": "Veuillez nous communiquer pour vérification : les preuves de l’enregistrement : mail reçu, fichier PDF, une capture d’écran des IMEI de votre téléphone (tapez *#06#), la page de votre passeport indiquant votre identité, la page de votre passeport comportant la date d’entrée en Tunisie (cachet de la police frontière Tunisienne. Le numéro de passeport en bas de la page doit être lisible)."
+  },
+  {
+    "id": "LANGUE_NON_SUPPORTEE",
+    "description": "Email rédigé en une langue autre que l'arabe, le français ou l'anglais.",
+    "reponse": "Merci de bien vouloir formuler votre réclamation en arabe, en français ou en anglais."
+  },
+  {
+    "id": "UTILISATION_NON_AUTORISEE_DONNEES",
+    "description": "Téléphone volé et utilisation non autorisée des données personnelles.",
+    "reponse": "Nous vous invitons à déposer une plainte auprès des services compétents du ministère de l'Intérieur ou du ministère de la Justice."
+  },
+  {
+    "id": "BLOCAGE_TELEPHONE_VOLE",
+    "description": "Demande de blocage ou de déblocage d’un téléphone volé.",
+    "reponse": "Le traitement des réclamations des téléphones volés (blocage, déblocage) relève des compétences du ministère de l'Intérieur."
+  },
+  {
+    "id": "INFO_ENREGISTREMENT_PASSEPORT",
+    "description": "Demande d’information sur l’enregistrement de téléphone importé de l’étranger (à travers un passeport).",
+    "reponse": "Nous vous invitons à enregistrer votre téléphone sur le site Sajalni en vous rendant dans la rubrique dédiée aux téléphones importés de l’étranger, accessible à l’adresse suivante : https://enregistrement.sajalni.tn/device/imported-device-registration."
+  },
+  {
+    "id": "SITE_INACCESSIBLE",
+    "description": "Inaccessibilité du site Sajalni, site en panne ou accessible uniquement sous certaines conditions.",
+    "reponse": "Le site http://sajalni.tn fonctionne parfaitement. Il est accessible seulement depuis la Tunisie."
+  },
+  {
+    "id": "DELAI_TRAITEMENT",
+    "description": "Demande d'information sur le délai de réponse d'une demande d'enregistrement sur le site Sajalni.",
+    "reponse": "Le traitement de la demande d’enregistrement nécessite un délai maximal de 3 jours ouvrables."
+  },
+  {
+    "id": "CODE_CERT",
+    "description": "Demande d'obtention du code du CERT pour les téléphones importés par colis postaux.",
+    "reponse": "Le code d’autorisation délivré par le CERT s’applique aux téléphones importés par colis postaux. Il peut être obtenu auprès de nos bureaux frontaliers."
+  },
+  {
+    "id": "ETAPES_ENREGISTREMENT",
+    "description": "Étapes à suivre pour l'enregistrement d’un terminal importé de l’étranger sur le site Sajalni.",
+    "reponse": "Pour enregistrer un terminal importé de l'étranger sur le site Sajalni, le client doit suivre deux étapes : 1- Accéder à l'espace d'enregistrement : Rendez-vous sur le lien suivant : https://enregistrement.sajalni.tn/device/imported-device-registration. Saisissez votre adresse e-mail, puis un message vous sera envoyé contenant un lien pour continuer la procédure. 2- Finaliser l'enregistrement : Remplissez soigneusement toutes les informations requises, en évitant toute erreur. Une fois l'enregistrement terminé, un message de confirmation apparaîtra à l'écran, incluant un code d'enregistrement. De plus, un e-mail accusant réception de votre demande vous sera envoyé."
+  },
+  {
+    "id": "EQUIPEMENT_NON_SUPPORTE",
+    "description": "Enregistrement des équipements autres que les téléphones et tablettes (montres, routeurs, etc.).",
+    "reponse": "Actuellement, l’enregistrement concerne uniquement les téléphones et les tablettes."
+  },
+  {
+    "id": "DATE_ENTREE_DEPASSEE",
+    "description": "Les personnes dont la date d’entrée dépasse trois mois (3 mois) sans avoir enregistré leur téléphone.",
+    "reponse": "Nous vous informons qu’il n’est pas possible, à l’heure actuelle, d’enregistrer votre téléphone avec une date d’entrée antérieure à trois mois. Dans le cas où vous auriez effectué d’autres voyages, nous vous invitons à soumettre de nouvelles demandes via le site Sajalni."
+  },
+  {
+    "id": "MODALITES_ENREGISTREMENT",
+    "description": "Modalités d’enregistrement d’un téléphone pour pouvoir l'utiliser sur le réseau de télécommunication tunisien.",
+    "reponse": "Pour pouvoir utiliser votre téléphone sur le réseau de télécommunication tunisien, vous avez la possibilité de l’enregistrer de deux manières : • sur le site Sajalni, dans la section dédiée aux téléphones importés, en fournissant les informations relatives à un voyage ne dépassant pas les trois mois: https://enregistrement.sajalni.tn/device/imported-device-registration. • Via le site https://e-bawaba.tn/ en utilisant votre identité numérique. (Valable seulement pour les citoyens Tunisiens)."
+  },
+  {
+    "id": "PASSEPORT_NON_CLAIR",
+    "description": "Photo de passeport non claire, floutée ou modifiée.",
+    "reponse": "Nous vous prions de bien vouloir nous transmettre des photos claires de votre passeport, sans floutage ni modification."
+  },
+  {
+    "id": "FORMAT_IMAGE_INVALIDE",
+    "description": "Photo ou document envoyé dans un format autre que le format image.",
+    "reponse": "Nous vous prions de bien vouloir transmettre les documents sous forme d’images (JPG, PDF, etc.)."
+  },
+  {
+    "id": "ENREGISTREMENT_IMEI1_UNIQUEMENT",
+    "description": "Instruction pour enregistrer un seul IMEI lorsqu'un seul est disponible.",
+    "reponse": "Nous vous invitons à enregistrer l'IMEI 1 de la manière suivante :\n\n- dans le champ IMEI1 : saisir l'IMEI non enregistré\n- Laisser le champ IMEI2 vide\n- Compléter les autres informations"
+  }
+]

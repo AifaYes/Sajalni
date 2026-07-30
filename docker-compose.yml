@@ -1,0 +1,78 @@
+version: "3.8"
+
+services:
+  # --- 1. Service Qdrant ---
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: sajalni-qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    networks:
+      - sajalni-network
+    restart: always
+
+  # --- 2. Service App Python (FastAPI) ---
+  sajalni-app:
+    build: .
+    container_name: sajalni-ai-app
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8000
+    environment:
+      - QDRANT_HOST=qdrant
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - qdrant
+    networks:
+      - sajalni-network
+    restart: always
+
+  # --- 3. Service d'initialisation de la DB (Seed Automatique) ---
+  sajalni-init:
+    build: .
+    container_name: sajalni-init-db
+    # Attend que le port 6333 de Qdrant responde, puis exécute le script d'ingestion
+    command: >
+      sh -c "python -c 'import time, socket;
+      s = socket.socket();
+      s.settimeout(2);
+      while s.connect_ex((\"qdrant\", 6333)) != 0: time.sleep(2)' &&
+      python src/seed.py"
+    environment:
+      - QDRANT_HOST=qdrant
+    depends_on:
+      - qdrant
+      - sajalni-app
+    networks:
+      - sajalni-network
+    restart: "no" # S'exécute une fois puis s'arrête proprement
+
+  # --- 4. Service n8n ---
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: sajalni-n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - WEBHOOK_URL=http://localhost:5678/
+    volumes:
+      - n8n_data:/home/node/.n8n
+    networks:
+      - sajalni-network
+    depends_on:
+      - sajalni-app
+    restart: always
+
+volumes:
+  qdrant_storage:
+  n8n_data:
+
+networks:
+  sajalni-network:
+    driver: bridge
